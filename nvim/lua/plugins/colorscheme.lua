@@ -1,12 +1,28 @@
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
-  { "rose-pine/neovim", name = "rose-pine" },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = {
+      styles = {
+        transparency = true,
+      },
+    },
+  },
+  opts = {
+    transparent = true,
+    styles = {
+      sidebars = "transparent",
+      floats = "transparent",
+    },
+  },
   {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
     opts = {
+      transparent = true,
       integrations = {
         aerial = true,
         alpha = true,
@@ -49,6 +65,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "rose-pine-moon",
+      transparent = true,
     },
   },
 }
