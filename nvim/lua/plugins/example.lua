@@ -12,7 +12,9 @@ return {
   {
     "neoclide/coc.nvim",
   },
-
+  {
+    "github/copilot.vim",
+  },
   -- change trouble config
   {
     "folke/trouble.nvim",
