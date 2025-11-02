@@ -105,20 +105,20 @@ source $ZSH/oh-my-zsh.sh
 alias cls="clear"
 alias k="kubectl"
 alias lg="lazygit"
-source /home/ashish/.aliases/docker.zsh
-source /home/ashish/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.aliases/docker.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(zoxide init zsh)"
 export TEST_NGINX_BINARY=$(which openresty)
 
-export PATH=$PATH:/home/ashish/dev/apisix
+export PATH=$PATH:$HOME/dev/apisix
 export PATH=$HOME/perl5/bin:$PATH
 export PATH="/usr/bin/core_perl:$PATH"
-export PATH=$PATH:/home/ashish/bin
+export PATH=$PATH:$HOME/bin
 source <(fzf --zsh)
 
 
 
-. "$HOME/.local/share/../bin/env"
+#. "$HOME/.local/share/../bin/env"
 
 # ISTIO RELATED ENV
 # eg: HUB="docker.io/istio", HUB="gcr.io/istio-testing"
@@ -132,16 +132,8 @@ export TAG=$USER
 # This defines a shortcut to change directories to $HOME/istio.io
 export ISTIO=$GOPATH/src/istio.io/istio
 
-
-
-
-
-
-
-
-
 # pnpm
-export PNPM_HOME="/home/ashish/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
